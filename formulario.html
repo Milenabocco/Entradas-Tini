@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saca tus Entradas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        
+        <h1>Entrada Tini</h1>
+    </div>
+    
+    <div class="container">
+        <h2>Saca tus entradas</h2>
+        <form id="myForm">
+            <label for="docente">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <br><br>
+            <label for="curso">Apellido:</label>
+            <input type="text" id="apellido" required>
+            <br><br>
+            <label for="compus">DNI:</label>
+            <input type="text" id="dni" required>
+            <br><br>
+            <label for="horaingreso">Email</label>
+            <input type="text" id="email" required>
+            <br><br>
+            <label for="estado" >Tipo entradas:</label>
+            <select name="Tipo"id="Tipo" >
+                <option>Ingrese sector de su entrada</option>
+                <option value="Platea VIP Platino">Platea VIP Platino</option>
+                <option value="Platea VIP Oro">Platea VIP Oro</option>
+                <option value="Platea VIP Plata">Platea VIP Plata</option>
+                <option value="Tribuna norte/sur">Tribuna norte/sur</option>
+                <option value="Campo">Campo</option>
+            </select>
+            <br><br>
+            <br><br>
+            <button type="button" onclick="agregar()">Comprar</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <h2>Datos ingresados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>DNI</th>
+                    <th>EMAIL</th>
+                    <th>Tipo entrada</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <script src="formulario.js"></script>
+    
+</body>
+</html>
